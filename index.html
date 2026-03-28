@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formulario de Inscripción</title>
+
+<link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+
+<img src="mirandaIMG.jpg" 
+     alt="Encabezado Registro" 
+     class="fondo-img">
+
+<h2>Formulario de Inscripción</h2>
+
+<form id="miFormulario">
+
+    <label>Tipo de Documento:</label><br>
+    <select required>
+        <option value="">Seleccione</option>
+        <option>Cédula</option>
+        <option>Tarjeta de Identidad</option>
+        <option>Pasaporte</option>
+    </select><br><br>
+
+    <label>Número de Documento:</label><br>
+    <input type="text" required pattern="[0-9]{6,12}"><br><br>
+
+    <label>Nombres:</label><br>
+    <input type="text" required minlength="3" maxlength="64"
+    pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,64}"><br><br>
+
+    <label>Apellidos:</label><br>
+    <input type="text" required minlength="3" maxlength="64"
+    pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,64}"><br><br>
+
+    <label>Dirección:</label><br>
+    <input type="text" required><br><br>
+
+    <label>Teléfono fijo:</label><br>
+    <input type="tel" required pattern="[0-9]{7}"><br><br>
+
+    <label>Teléfono celular:</label><br>
+    <input type="tel" id="celular" required pattern="[0-9]{10}"><br><br>
+
+    <label>Correo electrónico:</label><br>
+    <input type="email" required><br><br>
+
+    <label>Usuario:</label><br>
+    <input type="text" required minlength="3" maxlength="16"
+    pattern="[A-Za-z]{3,14}[0-9]{0,2}"><br><br>
+
+    <label>Password:</label><br>
+<input type="password" id="password" required maxlength="16" minlength="16">
+<small>Debe tener exactamente 16 caracteres</small><br><br>
+
+    <label>Fecha de inscripción:</label><br>
+    <input type="date" required><br><br>
+
+    <label>Hobbies:</label><br>
+    <textarea></textarea><br><br>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpiar">
+
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>
